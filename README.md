@@ -12,10 +12,14 @@ This repository contains a pure Python implementation of an event dispatcher. Th
 
 ## Installation
 
-You can install the Event Dispatcher using pip:
+You can install the Event Dispatcher using [pip](https://pypi.org/project/event-dispatching/):
 
 ```bash
 pip install event-dispatching
+```
+or using poetry
+```bash
+poetry add event-dispatching
 ```
 
 ## Usage
@@ -44,7 +48,7 @@ When you run this code, it will print:
 ```
 Event received: Hello, World!
 ```
-For more examples, please see [examples](https://github.com/trabem/event-dispatcher/tree/main/examples)
+More usage examples provided [here](https://github.com/trabem/event-dispatcher/tree/main/examples)
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
