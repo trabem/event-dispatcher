@@ -44,7 +44,7 @@ When you run this code, it will print:
 ```
 Event received: Hello, World!
 ```
-For more examples, please see [examples](examples)
+For more examples, please see [examples](https://github.com/trabem/event-dispatcher/tree/main/examples)
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
