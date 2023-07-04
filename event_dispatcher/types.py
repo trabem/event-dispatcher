@@ -1,4 +1,4 @@
-from typing import Any, TypeAlias, Callable, Awaitable
+from typing import Any, Awaitable, Callable, TypeAlias
 
 EventData: TypeAlias = Any
 SyncCallback: TypeAlias = Callable[[EventData], None]

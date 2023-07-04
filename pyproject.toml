@@ -41,7 +41,7 @@ testpaths = [
 
 [tool.ruff]
 line-length = 100
-src = ["src", "tests"]
+src = ["event_dispatcher", "tests"]
 select = [
     "E", # pycodestyle errors
     "W", # pycodestyle warnings
@@ -52,7 +52,8 @@ select = [
 ]
 
 [tool.ruff.flake8-quotes]
+inline-quotes = "double"
 docstring-quotes = "double"
 
 [tool.ruff.per-file-ignores]
-"__init__.py" = ["E402"]
+"__init__.py" = ["F401", "E402"]

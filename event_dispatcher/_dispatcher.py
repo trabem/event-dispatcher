@@ -1,6 +1,6 @@
 import collections
 from abc import ABC, abstractmethod
-from typing import TypeVar, Generic, Callable
+from typing import Callable, Generic, TypeVar
 
 from event_dispatcher import types
 
@@ -14,7 +14,9 @@ class BaseEventDispatcher(ABC, Generic[_CallbackT]):
     def subscribe(self, event_name: str, callback: _CallbackT) -> None:
         self._subscribers[event_name].append(callback)
 
-    def subscribe_decorator(self, event_name: str) -> Callable[[_CallbackT], _CallbackT]:
+    def subscribe_decorator(
+        self, event_name: str
+    ) -> Callable[[_CallbackT], _CallbackT]:
         def decorator(callback: _CallbackT) -> _CallbackT:
             self.subscribe(event_name, callback)
             return callback
@@ -44,5 +46,7 @@ class BaseEventDispatcher(ABC, Generic[_CallbackT]):
         return total_removed
 
     @abstractmethod
-    def dispatch(self, event_name: str, data: types.EventData | None = None) -> None:
+    def dispatch(
+        self, event_name: str, data: types.EventData | None = None
+    ) -> bool:  # pragma: no cover
         pass

@@ -1,18 +1,18 @@
 from unittest import mock
 
-from event_dispatcher import SyncEventDispatcher
+from event_dispatcher import AsyncEventDispatcher
 
 
-def test_dispatch_event():
+async def test_dispatch_event():
     # arrange
     event_name = "test.event_name"
     event_data = {"test": "data"}
-    callback_mock = mock.Mock()
-    sut = SyncEventDispatcher()
+    callback_mock = mock.AsyncMock()
+    sut = AsyncEventDispatcher()
     sut.subscribe(event_name, callback_mock)
 
     # act
-    result = sut.dispatch(event_name, event_data)
+    result = await sut.dispatch(event_name, event_data)
 
     # assert
     assert result is True
@@ -23,10 +23,10 @@ async def test_dispatch_event_without_subscribers():
     # arrange
     event_name = "test.event_name"
     event_data = {"test": "data"}
-    sut = SyncEventDispatcher()
+    sut = AsyncEventDispatcher()
 
     # act
-    result = sut.dispatch(event_name, event_data)
+    result = await sut.dispatch(event_name, event_data)
 
     # assert
     assert result is False
