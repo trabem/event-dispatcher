@@ -1,10 +1,11 @@
 [tool.poetry]
 name = "event-dispatcher"
 version = "0.1.0"
-description = "Event dispatcher"
+description = "Event Dispatcher"
 authors = ["Ruslan Saiko <ruslan.saiko.dev@gmail.com>"]
 readme = "README.md"
 packages = [{ include = "event_dispatcher" }]
+license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.10"
