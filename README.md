@@ -8,13 +8,14 @@ This repository contains a pure Python implementation of an event dispatcher. Th
 - Simple API: Easy to understand and use.
 - Lightweight: Minimal impact on your application's performance.
 - Flexible: Can be used in any Python application.
+- Asyncio Support: Compatible with Python's built-in asyncio library.
 
 ## Installation
 
 You can install the Event Dispatcher using pip:
 
 ```bash
-pip install event-dispatcher
+pip install event-dispatching
 ```
 
 ## Usage
@@ -43,7 +44,7 @@ When you run this code, it will print:
 ```
 Event received: Hello, World!
 ```
-
+For more examples, please see [examples](examples)
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.

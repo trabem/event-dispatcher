@@ -1,3 +1,10 @@
+"""Contains basic class for all implementation event dispatchers
+
+This module is meant for internal usage, not for users of the library.
+If you want implement custom event dispatcher
+use `event_dispatcher.BaseEventDispatcher`
+"""
+
 import collections
 from abc import ABC, abstractmethod
 from typing import Callable, Generic, TypeVar

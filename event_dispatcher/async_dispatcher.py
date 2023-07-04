@@ -1,3 +1,17 @@
+"""Async implementation of event dispatcher
+
+This module provide async implementation for BaseEventDispatcher.
+Implementation based on standard asyncio library.
+All callbacks are executes concurrently with `asyncio.gather`.
+It means callbacks sequential execution don't guaranteed.
+
+Typical usage example:
+
+  dispatcher = AsyncEventDispatcher()
+  dispatcher.subscribe("event.name", async_callback)
+  await dispatcher.dispatch("event.name", {"event": "data"})
+"""
+
 import asyncio
 
 from event_dispatcher import _dispatcher, types

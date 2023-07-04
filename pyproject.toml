@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "event-dispatcher"
+name = "event-dispatching"
 version = "0.1.0"
-description = "Event Dispatcher"
+description = "Pure python implementation of event dispatcher"
 authors = ["Ruslan Saiko <ruslan.saiko.dev@gmail.com>"]
 readme = "README.md"
 packages = [{ include = "event_dispatcher" }]
@@ -42,7 +42,7 @@ testpaths = [
 
 [tool.ruff]
 line-length = 100
-src = ["event_dispatcher", "tests"]
+src = ["event_dispatcher", "tests", "examples"]
 select = [
     "E", # pycodestyle errors
     "W", # pycodestyle warnings
