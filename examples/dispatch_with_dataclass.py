@@ -1,11 +1,12 @@
 import dataclasses
+from typing import Dict
 
 import event_dispatcher
 
 
 @dataclasses.dataclass
 class EventData:
-    data: dict
+    data: Dict
 
 
 def _callback(data: EventData):

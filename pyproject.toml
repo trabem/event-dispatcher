@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "event-dispatching"
-version = "0.1.3"
+version = "0.1.4"
 description = "Pure python implementation of event dispatcher"
 authors = ["Ruslan Saiko <ruslan.saiko.dev@gmail.com>"]
 repository = "https://github.com/trabem/event-dispatcher"
@@ -28,7 +28,7 @@ keywords = [
 
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.8"
 
 
 [tool.poetry.group.test.dependencies]

@@ -9,12 +9,13 @@ Typical usage example:
   dispatcher.subscribe("event.name", async_callback)
   dispatcher.dispatch("event.name", {"event": "data"})
 """
+from typing import Optional
 
 from event_dispatcher import _dispatcher, types
 
 
 class SyncEventDispatcher(_dispatcher.BaseEventDispatcher[types.SyncCallback]):
-    def dispatch(self, event_name: str, data: types.EventData | None = None) -> bool:
+    def dispatch(self, event_name: str, data: Optional[types.EventData] = None) -> bool:
         subscribers = self._subscribers[event_name]
 
         if not subscribers:

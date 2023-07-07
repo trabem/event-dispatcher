@@ -1,9 +1,10 @@
 import asyncio
+from typing import Dict
 
 import event_dispatcher
 
 
-async def _callback(data: dict):
+async def _callback(data: Dict):
     print(data)
 
 

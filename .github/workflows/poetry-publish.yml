@@ -25,6 +25,6 @@ jobs:
     - name: Publish python poetry package
       uses: JRubics/poetry-publish@v1.17
       with:
-        python_version: '3.10'
+        python_version: '3.8'
         pypi_token: ${{ secrets.PYPI_API_TOKEN }}
         ignore_dev_requirements: true

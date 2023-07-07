@@ -7,7 +7,7 @@ use `event_dispatcher.BaseEventDispatcher`
 
 import collections
 from abc import ABC, abstractmethod
-from typing import Callable, Generic, TypeVar
+from typing import Callable, Generic, List, Optional, TypeVar
 
 from event_dispatcher import types
 
@@ -33,7 +33,7 @@ class BaseEventDispatcher(ABC, Generic[_CallbackT]):
     def subscribers_count(self, event_name: str) -> int:
         return len(self._subscribers[event_name])
 
-    def subscribers(self, event_name: str) -> list[_CallbackT]:
+    def subscribers(self, event_name: str) -> List[_CallbackT]:
         return self._subscribers[event_name].copy()
 
     def unsubscribe(self, event_name, callback: _CallbackT) -> int:
@@ -54,6 +54,6 @@ class BaseEventDispatcher(ABC, Generic[_CallbackT]):
 
     @abstractmethod
     def dispatch(
-        self, event_name: str, data: types.EventData | None = None
+        self, event_name: str, data: Optional[types.EventData] = None
     ) -> bool:  # pragma: no cover
         pass

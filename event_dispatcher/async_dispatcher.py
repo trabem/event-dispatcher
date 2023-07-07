@@ -13,13 +13,14 @@ Typical usage example:
 """
 
 import asyncio
+from typing import Optional
 
 from event_dispatcher import _dispatcher, types
 
 
 class AsyncEventDispatcher(_dispatcher.BaseEventDispatcher[types.AsyncCallback]):
     async def dispatch(
-        self, event_name: str, data: types.EventData | None = None
+        self, event_name: str, data: Optional[types.EventData] = None
     ) -> bool:
         subscribers = self._subscribers[event_name]
 
