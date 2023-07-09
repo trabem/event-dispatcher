@@ -33,7 +33,6 @@ python = "^3.8"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^7.4.0"
-pytest-cov = "^4.1.0"
 pytest-asyncio = "^0.21.0"
 coverage = "^7.2.7"
 ruff = "^0.0.275"
@@ -52,12 +51,14 @@ build-backend = "poetry.core.masonry.api"
 asyncio_mode = "auto"
 xfail_strict = true
 junit_family = "xunit2"
-addopts = [
-    "--cov=event_dispatcher",
-    "--cov-branch",
-]
 testpaths = [
     "tests"
+]
+
+[tool.coverage.run]
+branch = true
+source = [
+    "event_dispatcher"
 ]
 
 [tool.ruff]
