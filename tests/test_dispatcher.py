@@ -24,7 +24,7 @@ def test_subscribe_to_event_decorator():
     sut = SyncEventDispatcher()
 
     # act
-    sut.subscribe_decorator(event_name)(callback_mock)
+    sut.subscribe(event_name)(callback_mock)
 
     # assert
     assert sut.subscribers_count(event_name) == 1

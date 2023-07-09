@@ -1,17 +1,14 @@
-.PHONY: unittests
-unittests:
-	coverage run -m pytest
-
 .PHONY: tests
-tests: unittests
+tests:
+	coverage run -m pytest
 	coverage report
 
 .PHONY: cov-html
-cov-html: unittests
+cov-html: tests
 	coverage html
 
 .PHONY: cov-xml
-cov-xml: unittests
+cov-xml: tests
 	coverage xml
 
 .PHONY: pre-commit

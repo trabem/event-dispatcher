@@ -6,7 +6,7 @@ def main():
 
     dispatcher = event_dispatcher.SyncEventDispatcher()
 
-    @dispatcher.subscribe_decorator(event_name)
+    @dispatcher.subscribe(event_name)
     def _callback(data):
         print(data)
 

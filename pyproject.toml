@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "event-dispatching"
-version = "0.1.5"
+version = "0.2.0"
 description = "Pure python implementation of event dispatcher"
 authors = ["Ruslan Saiko <ruslan.saiko.dev@gmail.com>"]
 repository = "https://github.com/trabem/event-dispatcher"
