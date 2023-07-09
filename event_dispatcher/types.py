@@ -1,7 +1,7 @@
 """types for event dispatcher"""
 
-from typing import Any, Awaitable, Callable, TypeAlias
+from typing import Any, Awaitable, Callable
 
-EventData: TypeAlias = Any
-SyncCallback: TypeAlias = Callable[[EventData], None]
-AsyncCallback: TypeAlias = Callable[[EventData], Awaitable[None]]
+EventData = Any
+SyncCallback = Callable[[EventData], None]
+AsyncCallback = Callable[[EventData], Awaitable[None]]
